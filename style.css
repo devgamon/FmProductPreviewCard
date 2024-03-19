@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+:root {
+    --DarkCyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --VeryDarkBlue: hsl(212, 21%, 14%);
+    --DarkGrayishBlue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--Cream);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    display: flex;
+    width: 50rem;
+    height: 37.5rem;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    background-color: var(--White);
+}
+
+.left-box {
+    height: 100%;
+    min-width: 50%;
+    background-image: url(/images/image-product-desktop.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.right-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2.8rem;
+}
+
+.right-box span {
+    color: var(--DarkGrayishBlue);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 500;
+}
+
+.right-box h1 {
+    font-size: 2.8rem;
+    color: var(--VeryDarkBlue);
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 700;
+}
+
+.right-box p {
+    font-size: 1rem;
+    color: var(--DarkGrayishBlue);
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.stats {    
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-right: 3rem;  
+}
+
+.stats h1 {
+    color: var(--DarkCyan);
+    font-weight: 700;
+    padding-right: 1.2rem;
+}
+
+.stats span {
+    text-decoration: line-through;
+    letter-spacing: 0;
+    font-weight: 500;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    background-color: var(--DarkCyan);
+    color: var(--White);
+    padding: 1.2rem;
+    border-radius: 0.6rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;   
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s all; 
+}
+
+.btn:hover {
+    background-color: hsl(159, 36%, 25%);
+}
+
+@media (max-width: 860px) {
+    .container {        
+        flex-direction: column;
+        width: 345px;
+        height: 610px;
+    }
+
+    .left-box {
+        max-height: 40%;
+        width: 100%;
+    }
+
+    .right-box {
+        height: 100%;
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .right-box h1 {
+        color: var(--VeryDarkBlue);
+        font-size: 1.8rem;
+        line-height: 1.0;
+    }
+
+    .right-box p {
+        color: var(--DarkGrayishBlue);
+        font-size: 0.8rem;
+        line-height: 1.6;
+    }
+
+    .right-box span {
+        font-size: 0.8rem;
+    }
+
+    .stats h1 {
+        color: var(--DarkCyan);
+    }
+}
